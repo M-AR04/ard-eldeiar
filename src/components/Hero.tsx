@@ -2,8 +2,26 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [particles, setParticles] = useState<{ id: number; style: any }[]>([]);
+
+  useEffect(() => {
+    const newParticles = [...Array(20)].map((_, i) => ({
+      id: i,
+      style: {
+        width: Math.random() * 10 + 5 + "px",
+        height: Math.random() * 10 + 5 + "px",
+        left: Math.random() * 100 + "%",
+        top: Math.random() * 100 + "%",
+        animationDelay: Math.random() * 5 + "s",
+        animationDuration: Math.random() * 10 + 10 + "s",
+      },
+    }));
+    setParticles(newParticles);
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Cinematic Background Overlay */}
@@ -12,20 +30,13 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Floating Particles (CSS only for performance) */}
+      {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle) => (
           <div
-            key={i}
+            key={particle.id}
             className="absolute bg-brand-gold/40 rounded-full blur-xl animate-float"
-            style={{
-              width: Math.random() * 10 + 5 + "px",
-              height: Math.random() * 10 + 5 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              animationDelay: Math.random() * 5 + "s",
-              animationDuration: Math.random() * 10 + 10 + "s",
-            }}
+            style={particle.style}
           />
         ))}
       </div>
