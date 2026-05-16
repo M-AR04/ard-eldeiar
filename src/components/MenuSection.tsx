@@ -94,6 +94,7 @@ export default function MenuSection() {
             {categories.map((cat) => (
               <button
                 key={cat.id}
+                suppressHydrationWarning={true}
                 onClick={() => setActiveTab(cat.id)}
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300",

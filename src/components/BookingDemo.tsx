@@ -125,7 +125,10 @@ export default function BookingDemo() {
             </div>
           </div>
 
-          <button className="w-full mt-12 py-5 bg-brand-gold text-brand-indigo font-black rounded-2xl hover:bg-brand-sand transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl shadow-brand-gold/20">
+          <button 
+            suppressHydrationWarning={true}
+            className="w-full mt-12 py-5 bg-brand-gold text-brand-indigo font-black rounded-2xl hover:bg-brand-sand transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl shadow-brand-gold/20"
+          >
             CONFIRM DEMO RESERVATION
             <Send size={20} />
           </button>

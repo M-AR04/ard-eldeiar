@@ -59,7 +59,10 @@ export default function GallerySection() {
         </PhotoProvider>
         
         <div className="mt-12 text-center">
-           <button className="px-8 py-3 border border-brand-gold/30 text-brand-gold font-bold rounded-full hover:bg-brand-gold/10 transition-all">
+           <button 
+             suppressHydrationWarning={true}
+             className="px-8 py-3 border border-brand-gold/30 text-brand-gold font-bold rounded-full hover:bg-brand-gold/10 transition-all"
+           >
              View Full Gallery
            </button>
         </div>

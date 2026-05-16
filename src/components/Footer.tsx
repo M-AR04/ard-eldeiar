@@ -64,7 +64,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-widest">Reserve</h3>
             <p className="text-white/50 text-sm mb-6">Plan your unforgettable gathering with us today.</p>
-            <button className="w-full py-4 bg-brand-gold text-brand-indigo font-bold rounded-xl hover:bg-brand-sand transition-all">
+            <button 
+              suppressHydrationWarning={true}
+              className="w-full py-4 bg-brand-gold text-brand-indigo font-bold rounded-xl hover:bg-brand-sand transition-all"
+            >
               Book via WhatsApp
             </button>
           </div>
