@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { MapPin, Phone, Clock, MessageSquare } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
