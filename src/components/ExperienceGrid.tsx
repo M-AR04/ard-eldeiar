@@ -73,8 +73,11 @@ export default function ExperienceGrid() {
                 <p className="text-white/70 max-w-md group-hover:text-white transition-colors">
                   {exp.description}
                 </p>
-                <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-brand-gold font-bold cursor-pointer">
-                  Learn More <span className="text-xl">→</span>
+                <div 
+                  onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-brand-gold font-bold cursor-pointer"
+                >
+                  Book Experience <span className="text-xl">→</span>
                 </div>
               </div>
             </motion.div>

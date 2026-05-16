@@ -61,6 +61,7 @@ export default function GallerySection() {
         <div className="mt-12 text-center">
            <button 
              suppressHydrationWarning={true}
+             onClick={() => alert("Full Gallery coming soon to Ard El Diyar!")}
              className="px-8 py-3 border border-brand-gold/30 text-brand-gold font-bold rounded-full hover:bg-brand-gold/10 transition-all"
            >
              View Full Gallery

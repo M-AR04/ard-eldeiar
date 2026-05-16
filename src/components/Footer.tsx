@@ -66,6 +66,7 @@ export default function Footer() {
             <p className="text-white/50 text-sm mb-6">Plan your unforgettable gathering with us today.</p>
             <button 
               suppressHydrationWarning={true}
+              onClick={() => window.open('https://wa.me/962', '_blank')}
               className="w-full py-4 bg-brand-gold text-brand-indigo font-bold rounded-xl hover:bg-brand-sand transition-all"
             >
               Book via WhatsApp

@@ -62,12 +62,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 
               suppressHydrationWarning={true}
+              onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full sm:w-auto px-10 py-4 bg-brand-gold text-brand-indigo font-bold rounded-full hover:bg-brand-sand transition-all duration-300 transform hover:scale-105 shadow-lg shadow-brand-gold/20"
             >
               View Menu
             </button>
             <button 
               suppressHydrationWarning={true}
+              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full sm:w-auto px-10 py-4 glass text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
             >
               Explore Experiences
