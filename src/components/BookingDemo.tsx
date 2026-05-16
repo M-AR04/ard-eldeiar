@@ -52,6 +52,7 @@ export default function BookingDemo() {
                 <Calendar size={16} className="text-brand-gold" /> Preferred Date
               </label>
               <input
+                suppressHydrationWarning={true}
                 type="date"
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-gold/50 transition-all"
                 defaultValue="2026-05-20"
@@ -63,7 +64,10 @@ export default function BookingDemo() {
               <label className="text-white/70 text-sm font-bold flex items-center gap-2">
                 <Users size={16} className="text-brand-gold" /> Number of Guests
               </label>
-              <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-gold/50 transition-all appearance-none">
+              <select 
+                suppressHydrationWarning={true}
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-gold/50 transition-all appearance-none"
+              >
                 <option className="bg-brand-indigo">2 Guests</option>
                 <option className="bg-brand-indigo">4 Guests</option>
                 <option className="bg-brand-indigo">6 Guests</option>
@@ -83,6 +87,7 @@ export default function BookingDemo() {
                 ].map((exp) => (
                   <button
                     key={exp.id}
+                    suppressHydrationWarning={true}
                     onClick={() => setFormData({ ...formData, experience: exp.id })}
                     className={cn(
                       "flex items-center justify-center gap-2 p-4 rounded-2xl border transition-all",
@@ -110,6 +115,7 @@ export default function BookingDemo() {
                 ].map((seat) => (
                   <button
                     key={seat.id}
+                    suppressHydrationWarning={true}
                     onClick={() => setFormData({ ...formData, seating: seat.id })}
                     className={cn(
                       "p-4 rounded-2xl border transition-all font-bold",
